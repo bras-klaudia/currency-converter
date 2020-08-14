@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walutowy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body class="container">
+
+    <main class="container__white">
+
+        <h1 class="header">kalkulator walutowy</h1>
+
+
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Wymiana waluty
+                </legend>
+
+                <p>
+                    <label>
+                        <span class="form__labelText">kwota w zł*:</span>
+                        <input class="form__field js-amount" name="value" type="number" required step="0.01"></label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">waluta: </span>
+
+                        <select class="form__field js-currency" name="currencyElement">
+                            <option value="EUR">euro</option>
+                            <option value="USD">dolar amerykański</option>
+                            <option value="GBP">funt brytyjski</option>
+                            <option value="CHF">frank szwajcarki</option>
+                        </select>
+                    </label>
+                </p>
+
+                <button class="form__button">przelicz</button>
+
+            </fieldset>
+
+            <p class="form__nbp">Kursy walut na podstawie Tabeli nr 136/A/NBP/2020 z dnia 2020-07-15</p>
+            
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Wynik</legend>
+                <p class="form__result js-result"></p>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="container__white--footer">Klaudia Braś © 2020</footer>
+
+</body>
+
+</html>
